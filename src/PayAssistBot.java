@@ -13,52 +13,6 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 public class PayAssistBot extends TelegramLongPollingBot {
 
 	
-	/* public void onUpdateReceived(Update update) {
-		String command = update.getMessage().getText();
-		SendMessage message = new SendMessage();
-		
-		if(command.equals("/num")) {
-			message.setText("How many people are you eating with " + update.getMessage().getFrom().getFirstName() + "?");
-			//numberOfPax = Integer.parseInt(update.getMessage().getText());
-			
-			SendMessage message2 = new SendMessage();
-			message2.setText("You are dining with " + numberOfPax +".");
-			message2.setChatId(update.getMessage().getChatId().toString());
-		}
-		
-		message.setChatId(update.getMessage().getChatId().toString());
-		
-		
-		try {
-			execute(message);		
-		} catch (TelegramApiException e) {
-			e.printStackTrace();
-		}
-	} */
-	
-	
-	/* if (update.hasMessage() && update.getMessage().hasText() && message_id != update.getMessage().getMessageId()) {
-
-			            
-			            SendMessage reply = new SendMessage();
-			            
-			            if (isNumber(Float.parseFloat(temp))) {
-			            	
-			                String response = "Price adjust for GST & Service Charge: ";
-			                reply.setText(response);
-			                reply.setChatId(Long.toString(chat_id + 1));
-			            }
-			            try {
-			                execute(reply);
-			            } catch (TelegramApiException e) {
-			                e.printStackTrace();
-			                System.out.println("Oops");
-			            } 
-				
-				
-				 } */
-	
-	
 	public void onUpdateReceived(Update update) {
 		Message message = update.getMessage();
 		String temp = message.getText();
